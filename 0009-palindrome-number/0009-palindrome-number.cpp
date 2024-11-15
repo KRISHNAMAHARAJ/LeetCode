@@ -1,23 +1,26 @@
 class Solution {
 public:
-    // bool isPalindrome(int x) {
-    //      if (x < 0) {
-    //         return false;
-    //     }
+    bool isPalindrome(int x) {
+         if (x < 0) {
+            return false;
+        }
 
-    //     long long reversed = 0;
-    //     long long temp = x;
+        long long reversed = 0;
+        long long temp = x;
 
-    //     while (temp != 0) {
-    //         int digit = temp % 10;
-    //         reversed = reversed * 10 + digit;
-    //         temp /= 10;
-    //     }
+        while (temp != 0) {
+            int digit = temp % 10;
+            reversed = reversed * 10 + digit;
+            temp /= 10;
+        }
 
-    //     return (reversed == x);
-    // }
+        return (reversed == x);
+    }
 
 
+
+    ////////////// USING STRING CONVERSION //////////////////////
+    /*
     bool isPalindrome(int x) {
 
         string str = to_string(x);
@@ -27,4 +30,5 @@ public:
 
         return (str == rev);
     }
+    */
 };
