@@ -12,9 +12,6 @@ public:
                 nums[j++] = nums[i];
                 k++;
             }
-            else {
-                continue;
-            }
         }
         return k;
     }
