@@ -5,12 +5,12 @@ public:
     for(auto it:nums){
         mp[it]++;
     }
-    int res=0;    
+    int r=0;    
     for(auto it:mp){
         if(it.second==2){ 
-            res ^=it.first;
+            r ^=it.first;
         }
     }
-    return res;
+    return r;
     }
 };
