@@ -10,6 +10,7 @@ public:
         }
         return n;
 */
+////////////// in O(logn) time ////////////
 
         int left = 0, right =n-1;
         int mid=0;
