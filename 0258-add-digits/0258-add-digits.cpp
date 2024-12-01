@@ -11,15 +11,17 @@ public:
     */
     int addDigits(int num) {
     int sum=0;
-    while(num>0)
+    while(num>9)
     {
-        sum+=(num%10);
-        num/=10;
+        while(num)
+        {
+            sum+=(num%10);
+            num/=10;
+        }
+        num=sum;
+        sum=0;
     }
-    if(sum<10)
-        return sum;
-    else
-        return addDigits(sum);
+    return num;
 }
 };
 
