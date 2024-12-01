@@ -1,6 +1,23 @@
 class Solution {
 public:
     bool checkIfExist(vector<int>& arr) {
+        for (int i = 0; i < arr.size(); i++) {
+            int target = 2 * arr[i];
+            for (int j = 0; j < arr.size(); j++) {
+                if (i != j && arr[j] == target) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+};
+
+
+/*
+
+bool checkIfExist(vector<int>& arr) {
     unordered_set<int> seen;  
 
     for (int num : arr) {
@@ -12,9 +29,8 @@ public:
     }
     return false;
 }
-};
 
-
+*/
 /*
 
 bool checkIfExist(vector<int>& arr) {
