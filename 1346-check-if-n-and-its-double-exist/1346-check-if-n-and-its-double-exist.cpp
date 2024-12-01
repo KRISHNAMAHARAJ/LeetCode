@@ -1,14 +1,14 @@
 class Solution {
 public:
     bool checkIfExist(vector<int>& arr) {
-    unordered_set<int> seen;  // To store the elements we have seen so far
+    unordered_set<int> seen;  
 
     for (int num : arr) {
-        // Check if current number is half of another number we have already seen
+        
         if (seen.count(2 * num) || (num % 2 == 0 && seen.count(num / 2))) {
             return true;
         }
-        seen.insert(num);  // Insert current number into the set
+        seen.insert(num);  
     }
     return false;
 }
