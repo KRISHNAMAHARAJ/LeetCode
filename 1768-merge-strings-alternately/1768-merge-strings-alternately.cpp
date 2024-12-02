@@ -10,12 +10,12 @@ public:
         }
 
         string ans;
-        for(int i=0, j=0; i<n; i++, j++){
+        for(int i=0; i<n; i++){
             ans.push_back(word1[i]);
-            ans.push_back(word2[j]);
+            ans.push_back(word2[i]);
         }
-        for(int j=n1 ;j<n2; j++){
-            ans.push_back(word2[j]);
+        for(int i=n1 ;i<n2; i++){
+            ans.push_back(word2[i]);
         }
         for(int i=n2; i<n1; i++){
             ans.push_back(word1[i]);
