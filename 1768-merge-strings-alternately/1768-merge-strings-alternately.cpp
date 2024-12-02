@@ -4,11 +4,8 @@ public:
 
         int n1 = word1.length();
         int n2 = word2.length();
-        int n = n1;
-        if(n1 > n2) {
-            n = n2;
-        }
-
+        int n = min(n1,n2);
+    
         string ans;
         for(int i=0, j=0; i<n; i++, j++){
             ans.push_back(word1[i]);
