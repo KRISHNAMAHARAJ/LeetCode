@@ -18,12 +18,18 @@ public:
 };
 
 
+////////BOTH TC ANS SC ARE SAME O(N^2) and O(N) ///////////
+
 /*
 vector<int> findWordsContaining(vector<string>& words, char x) {
-       
-        int n= words.size();
-        vector<int> result;
+        vector<int>res;
+        for(int i=0;i<words.size();i++){
+            if(words[i].find(x)!=string::npos){
+                res.push_back(i);
 
-
-}
+            }
+        }
+        return res;
+        
+    }
 */
