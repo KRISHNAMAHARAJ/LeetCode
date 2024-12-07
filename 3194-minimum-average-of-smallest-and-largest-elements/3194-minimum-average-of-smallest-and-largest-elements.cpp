@@ -5,7 +5,7 @@ public:
         int n= nums.size();
         vector<long double> answers;
 
-        sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end());              ///// T.C. :- O(nlogn)
         int left =0, right=n-1;
         long double min_avg = DBL_MAX;
 
