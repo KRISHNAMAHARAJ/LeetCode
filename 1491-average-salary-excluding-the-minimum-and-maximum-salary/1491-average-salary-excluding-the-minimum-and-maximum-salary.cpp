@@ -3,7 +3,7 @@ public:
     double average(vector<int>& salary) {
         
         int n=salary.size();
-        double sum=0;
+        double sum=0;                           ////////In O(n) Time complexity /////
         int minm = INT_MAX, maxm = INT_MIN;
 
         for(int i=0; i<n; i++){
