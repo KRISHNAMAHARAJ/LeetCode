@@ -9,11 +9,10 @@ public:
                 count++;
             }
             else {
-                result = max(count, result);
                 count =0;
-            }  
+            }
+            result = max(count, result); 
         }
-        result = max(count, result);
         return result;
     }
 };
