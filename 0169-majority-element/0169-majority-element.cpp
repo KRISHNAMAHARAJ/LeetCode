@@ -1,22 +1,19 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int count = 0;
-        int candidate = 0;
+
+        int n=nums.size();
+        map<int, int> mp;         /////// Using this method TC:- O(nlogn) and SC:- O(n)
         
-        for (int num : nums) {
-            if (count == 0) {
-                candidate = num;
-            }
-            
-            if (num == candidate) {
-                count++;
-            } else {
-                count--;
+        for(int i=0; i<n; i++){
+            mp[nums[i]]++;
+        }
+        for(auto it: mp){
+            if(it.second > (n/2)){
+                return it.first;
             }
         }
-        
-        return candidate;
+        return -1;
     }
 };
 
