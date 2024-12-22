@@ -4,11 +4,11 @@ public:
         
         int rows = nums.size();
         int cols = nums[0].size();
-
-        for (auto& row : nums) {
-            sort(row.begin(), row.end(), greater<int>());
+                                        ////// Sorting each rows of a matrix
+        for (int k=0; k<rows; k++) {
+            sort(nums[k].begin(), nums[k].end());
         }
-        
+
         int sum =0;
 
         for(int j=0; j<cols; j++){
