@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
 
-        vector<int> result;
+        vector<int> result;                 ///// TC:- O(m*n) SC:- O(1)
         
         int top =0, bottom = matrix.size()-1;      ///// for ROW
         int left =0, right = matrix[0].size()-1;    //// for COLUMN
