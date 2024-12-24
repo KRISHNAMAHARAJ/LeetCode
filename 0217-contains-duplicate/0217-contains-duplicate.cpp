@@ -1,13 +1,6 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        unordered_set<int> numSet(nums.begin(), nums.end());
-        return numSet.size() < nums.size();        
-    }
-};
-
-/*
-    bool containsDuplicate(vector<int>& nums) {
 
         unordered_set<int> seen;
         for (int i = 0; i < nums.size(); i++) {
@@ -18,7 +11,10 @@ public:
         }
         return false; 
     }
-*/
+};
+
+
+///////// USING SORTING TC:- O(nlogn) SC:- O(n)
 
 /*
     bool containsDuplicate(vector<int>& nums) {
@@ -29,7 +25,16 @@ public:
                 return true;
             }
         }
-        
         return false;        
+    }
+*/
+
+
+/////// USING LENGTH OF THE SET TC:- O(n) and SC:- O(n)
+
+/*
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int> numSet(nums.begin(), nums.end());
+        return numSet.size() < nums.size();        
     }
 */
