@@ -22,3 +22,11 @@ public:
         return sum;
     }
 };
+
+
+///////// instead of writing line no. 9 to 17 write these two lines here n = mat.size()
+/* 
+    for (int i = 0; i < n; i++) {
+            result += mat[i][i] + mat[i][n - i - 1];
+        }
+*/
