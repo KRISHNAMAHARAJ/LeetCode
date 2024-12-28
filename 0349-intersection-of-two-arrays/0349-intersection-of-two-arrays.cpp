@@ -3,6 +3,25 @@ public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
         
         vector<int> result;
+        unordered_set<int> st1(nums1.begin(), nums1.end());
+        unordered_set<int> st2(nums2.begin(), nums2.end());
+
+        for(int num : st1){
+            if(st2.count(num)){
+                result.push_back(num);
+            }
+        }
+        return result;
+    }
+};
+
+
+
+//////// USING set  TC:- O(n+m) SC:- O(n+min(n,m))
+/*
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        
+        vector<int> result;
         unordered_set<int> st;
 
         for(int i=0; i<nums1.size(); i++){
@@ -17,4 +36,4 @@ public:
         }
         return result;
     }
-};
+*/
