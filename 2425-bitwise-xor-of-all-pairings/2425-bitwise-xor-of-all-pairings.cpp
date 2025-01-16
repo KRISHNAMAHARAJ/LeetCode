@@ -21,3 +21,19 @@ public:
         return result;
     }
 };
+
+
+//////// Brute force :- TC:- O(m*n)
+//////But TLE is coming for some test cases
+/*
+    int xorAllNums(vector<int>& nums1, vector<int>& nums2) {
+        
+        int result=0;
+        for(int i=0; i<nums1.size(); i++){
+            for(int j=0; j<nums2.size(); j++){
+                result ^= (nums1[i] ^ nums2[j]);
+            }
+        }
+        return result;
+    }
+*/
