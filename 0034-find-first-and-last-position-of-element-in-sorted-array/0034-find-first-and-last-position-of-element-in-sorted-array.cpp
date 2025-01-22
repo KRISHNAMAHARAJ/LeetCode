@@ -3,10 +3,10 @@ public:
     vector<int> searchRange(vector<int>& nums, int target) {
         
         int n = nums.size();
-        int left =0, right = n-1;
         vector<int> result(2, -1);
-        int start = -1, end = -1;
+        int start = -1, end = -1;       //Using Binary Search TC:- O(logn) and SC:- O(1)
 
+        int left =0, right = n-1;       
         while(left <= right){
             int mid = (left + right)/2;
             if(nums[mid] >= target){
@@ -24,7 +24,6 @@ public:
 
 
         left =0, right = n-1;
-        
         while(left <= right){
             int mid = (left + right)/2;
             if(nums[mid] <= target){
