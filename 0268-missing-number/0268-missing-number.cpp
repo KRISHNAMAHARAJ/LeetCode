@@ -18,6 +18,7 @@ public:
        return missingNum;
 */
 
+/*
     int N = nums.size() ;
 
     int xor1 = 0, xor2 = 0;
@@ -29,6 +30,14 @@ public:
     xor1 = xor1 ^ N; //XOR up to [1...N]
 
     return (xor1 ^ xor2); // the missing number
-    }
-
+*/
+    
+        int res = nums.size();
+        
+        for (int i = 0; i < nums.size(); i++) {
+            res += i - nums[i];
+        }
+        
+        return res; 
+    }     
 };
