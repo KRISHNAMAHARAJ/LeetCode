@@ -3,23 +3,24 @@ public:
     int firstMissingPositive(vector<int>& nums) {
         
         int n = nums.size();                
-                                    //// Using Pigeonhole principle TC:- O(n) and SC:- O(1)
+                                //// Using Pigeonhole principle TC:- O(n) and SC:- O(1)
+        //data filtering
         for(int i=0; i<n; i++){
             if(nums[i] <= 0 || nums[i] > n){
                 nums[i] = n+1; 
             }
         }
-
+        //mark visited
         for(int i=0; i<n; i++){
             int element = abs(nums[i]);
             if(element == n+1){
                 continue;
             }
             int seat = element - 1;       // index == seat 
-            if(nums[seat] < 0){
-                continue;
+            // there is no need of changing negative again once it become negative
+            if(nums[seat] > 0){   
+                nums[seat] = -nums[seat];
             }
-            nums[seat] = -nums[seat];
         }
 
         for(int i=0; i<n; i++){
@@ -30,6 +31,8 @@ public:
         return n+1;
     }
 };
+
+
 
 //Above method is optimal and best
 
