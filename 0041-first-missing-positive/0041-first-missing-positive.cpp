@@ -3,6 +3,29 @@ public:
     int firstMissingPositive(vector<int>& nums) {
         
         int n = nums.size();
+           
+        sort(nums.begin(), nums.end());
+        int cand = 1;
+        for(int i=0; i< n; i++){
+            if(nums[i] > cand){
+                return cand;
+            }
+            else if(nums[i] == cand){
+                cand++;
+            }
+        }
+        return cand;
+    }
+};
+
+
+
+
+///////3rd Method:-  Using Hash Set TC:- O(n) and SC:- O(n) here extra space is used.
+/*
+    int firstMissingPositive(vector<int>& nums) {
+        
+        int n = nums.size();
         unordered_set<int> st;
 
         for(int i=0; i<n; i++){
@@ -15,11 +38,12 @@ public:
         }
         return n+1;    
     }
-};
+*/
 
 
 
-//////////// Using BRUTE FORCE TC:- O(n^2). But for large no.s of input it is difficult to process. So, its giving TLE. Only 172/178 test cases passed. 
+
+////////1st method:- Using BRUTE FORCE TC:- O(n^2). But for large no.s of input it is difficult to process. So, its giving TLE. Only 172/178 test cases passed. 
 /*
     int firstMissingPositive(vector<int>& nums) {
         
