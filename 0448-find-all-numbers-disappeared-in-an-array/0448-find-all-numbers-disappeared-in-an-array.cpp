@@ -5,8 +5,34 @@ public:
         int n = nums.size();
         vector<int> result;
 
-        unordered_set<int> st;
+        for(int i=0; i<n; i++){
+            int element = abs(nums[i]);
+            int seat = element - 1;
+            if(nums[seat] > 0){
+                nums[seat] = -nums[seat];
+            }
+        }
+        for(int i=0; i<n; i++){
+            if(nums[i] > 0){
+                result.push_back(i+1);
+            }
+        }
+        
 
+        return result;
+    }
+};
+
+
+
+/////// Using HashSet TC:- O(n) and SC:- O(n) due to using extra space of lookup table
+/*
+    vector<int> findDisappearedNumbers(vector<int>& nums) {
+        
+        int n = nums.size();
+        vector<int> result;
+
+        unordered_set<int> st;
         for(int i=0; i<n; i++){
             st.insert(nums[i]);
         }
@@ -19,7 +45,7 @@ public:
 
         return result;
     }
-};
+*/
 
 
 
