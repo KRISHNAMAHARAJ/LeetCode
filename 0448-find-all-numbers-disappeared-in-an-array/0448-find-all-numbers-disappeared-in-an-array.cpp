@@ -4,7 +4,7 @@ public:
         
         int n = nums.size();
         vector<int> result;
-
+                                ////Using Pigeonhole Principle TC:- O(n) and SC:- O(1)
         for(int i=0; i<n; i++){
             int element = abs(nums[i]);
             int seat = element - 1;
@@ -17,8 +17,6 @@ public:
                 result.push_back(i+1);
             }
         }
-        
-
         return result;
     }
 };
