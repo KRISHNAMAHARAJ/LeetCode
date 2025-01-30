@@ -2,19 +2,8 @@ class Solution {
 public:
     int peakIndexInMountainArray(vector<int>& arr) {
         
-        int i=0;
-        while(arr[i] < arr[i+1]){
-            i++;
-        }
-        return i;
-    }
-};
-
-/*
-    int peakIndexInMountainArray(vector<int>& arr) {
-        
         int left =0, right = arr.size()-1;
-
+                                            //// BInary Approach TC:- O(logn)
         while(left < right){
             int mid = left + (right - left)/2;
 
@@ -26,5 +15,18 @@ public:
             }
         }
         return left;
+    }
+};
+
+
+///// Linear Approach TC:- O(n)
+/*
+    int peakIndexInMountainArray(vector<int>& arr) {
+        
+        int i=0;
+        while(arr[i] < arr[i+1]){
+            i++;
+        }
+        return i;
     }
 */
