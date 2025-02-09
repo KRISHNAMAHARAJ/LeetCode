@@ -2,25 +2,6 @@ class Solution {
 public:
     int findMin(vector<int>& nums) {
         
-        int mini = nums[0];
-        for (int i = 1; i < nums.size(); i++) {
-            mini = min(mini, nums[i]);
-        }
-        return mini;
-    }
-};
-
-/*
-    int mini = nums[0];
-    for (int i = 1; i < nums.size(); i++) {
-        mini = min(mini, nums[i]);
-    }
-    return mini;
-    }
-*/
-/*
-    int findMin(vector<int>& nums) {
-        
         int left =0, right = nums.size() -1;
 
         while (left < right){
@@ -34,5 +15,18 @@ public:
             }
         }
         return nums[right];
+    }
+};
+
+
+////// Using Linear search TC:- O(n)
+/*
+    int findMin(vector<int>& nums) {
+        
+        int mini = nums[0];
+        for (int i = 1; i < nums.size(); i++) {
+            mini = min(mini, nums[i]);
+        }
+        return mini;
     }
 */
