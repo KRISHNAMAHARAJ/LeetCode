@@ -3,16 +3,22 @@ public:
     void rotate(vector<int>& nums, int k) {
 
         int n=nums.size();
-        k = k%n;
-        
-        reverse(nums.begin(), nums.end());
+        k = k%n;                    //Cyclic Replacement Approach
 
-        reverse(nums.begin(), nums.begin() + k);
+        int count = 0; // Count of elements placed correctly
+        for (int start = 0; count < n; start++) {
+            int current = start;
+            int prev = nums[start];
 
-        reverse(nums.begin() + k, nums.end());
+            do {
+                int nextIdx = (current + k) % n;
+                swap(nums[nextIdx], prev);
+                current = nextIdx;
+                count++;
+            } while (start != current);
+        }
     }
 };
-
 
 
 ///// Using reverse function TC:- O(n) and SC:- O(1)
